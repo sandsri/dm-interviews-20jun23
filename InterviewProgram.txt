@@ -17,8 +17,8 @@ InventoryID: ID (PK)
 ProductName: String
 ProductDescription: String
 PricePerUnit: Currency
-xx
-xx
+Plant: String
+StorageLocation: String
 
 
 (4) Create Postman collection for the CRUD

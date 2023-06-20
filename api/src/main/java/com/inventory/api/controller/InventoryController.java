@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
 import com.inventory.api.DTO.Inventory_Master_DTO;
 import org.springframework.http.HttpStatus;
 @CrossOrigin(maxAge = 3600)
@@ -45,7 +46,7 @@ public class InventoryController {
         }
     }
     @GetMapping(value="/getInventoryDetails")
-    public ResponseEntity<Inventory_Master_Ayush> getInventoryDetails(String inventoryMasterId){
+    public ResponseEntity<Inventory_Master_Ayush> getInventoryDetails(@RequestParam String inventoryMasterId){
         try {
             Inventory_Master_Ayush savedInventory= inventoryService.getInventory(inventoryMasterId);
             return ResponseEntity.status(HttpStatus.OK).body(savedInventory);
@@ -55,7 +56,7 @@ public class InventoryController {
         }
     }
     @GetMapping(value="/deleteInventory")
-    public ResponseEntity<Inventory_Master_Ayush> deleteInventory(String inventoryMasterId){
+    public ResponseEntity<Inventory_Master_Ayush> deleteInventory(@RequestParam String inventoryMasterId){
         try {
             Inventory_Master_Ayush savedInventory= inventoryService.deleteInventory(inventoryMasterId);
             return ResponseEntity.status(HttpStatus.OK).body(savedInventory);

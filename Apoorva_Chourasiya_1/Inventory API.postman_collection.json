@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "5f2715c5-368a-4f49-9fa0-e08e63de2884",
+		"name": "Inventory API",
+		"description": "CRUD operations for Inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3006757"
+	},
+	"item": [
+		{
+			"name": "Get All Inventory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/inventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Inventory by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/inventory/{{inventory_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventory",
+						"{{inventory_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Inventory",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"productName\": \"ApTest\",\n  \"productDescription\": \"Product Description\",\n  \"pricePerUnit\": 10.99,\n  \"plant\": \"Sample Plant\",\n  \"storageLocation\": \"Sample Location\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/inventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Inventory",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"productName\": \"Updated Product\",\n  \"productDescription\": \"Updated Description\",\n  \"pricePerUnit\": 19.99,\n  \"plant\": \"Updated Plant\",\n  \"storageLocation\": \"Updated Location\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/inventory/{{inventory_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventory",
+						"{{inventory_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Inventory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/inventory/{{inventory_id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"inventory",
+						"{{inventory_id}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "d0e35f41-27ae-4fe8-a0dc-97a8039741c2",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "26190870"
+	},
+	"item": [
+		{
+			"name": "search resttemplete",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:100/api/rest/search?name=sp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "100",
+					"path": [
+						"api",
+						"rest",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "sp"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get inventory",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:100/api/inventory/get"
+			},
+			"response": []
+		},
+		{
+			"name": "save Inventory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"productName\":\"food\",\r\n    \"productDesc\":\"food is good\",\r\n    \"pricePerUnit\":\"23\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:100/api/inventory/save"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

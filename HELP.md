@@ -27,11 +27,11 @@ The Inventory Controller is built with the following technologies:
 To run the Inventory Controller locally, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/sandsri/dm-interviews-20jun23.git`
-2. Navigate niranjan branch: `git checkout Niranjan_branch`
+2. Navigate niranjan branch: `git checkout Niranjan_branch_search`
 3. Configure the database connection in the `application.yml` file.
 4. Build the application: `./gradlew build`
 5. Run the application: `./gradlew bootRun`
-6. The API will be accessible at `http://localhost:8080/api/inventory`.
+6. The API will be accessible at `http://localhost:8080/api/search/{name}`.
 
 Make sure you have Java and Gradle installed on your system.
 
@@ -41,12 +41,5 @@ The following configuration properties can be modified in the `application.yml` 
 
 ```properties
 # Database configuration
-spring.datasource.url=jdbc:mysql://localhost:3306/inventory_db
-spring.datasource.username=root
-spring.datasource.password=password
-
-# Hibernate configuration
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
+app.search.url=url
 

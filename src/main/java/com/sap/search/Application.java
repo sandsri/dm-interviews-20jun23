@@ -1,4 +1,4 @@
-package com.sap.inventory;
+package com.sap.search;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,0 +1,13 @@
+
+
+spring:
+  datasource:
+    initialization-mode: always
+    url: jdbc:mysql://sql12.freesqldatabase.com:3306/sql12627410
+    username: sql12627410
+    password: M5rUhtNJIK
+    driver-class-name=com: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
